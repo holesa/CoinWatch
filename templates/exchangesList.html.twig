@@ -1,0 +1,42 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<div class="content"> 
+    <div class="header-text">
+        <h2 class="header-title">All cryptocurrency exchanges</h2>
+        <p class="header-desc">Compare all 287 cryptocurrency exchange platforms, apps and brokers ranked by trading volume.</p>
+    </div>      
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Exchanges</th>
+                    <th>24h Trade Volume</th>
+                    <th class="mobile-hide">Markets</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for exchange in data.exchanges %}
+                <tr class="table-row">
+                    <td class="table-cell">{{ exchange.rank}}</td>
+                    <td class="table-cell">
+                        <img class="item-sm-logo" src="{{exchange.iconUrl}}">
+                        <div class="item-name"><a href="exchange/{{exchange.id}}+{{exchange.name|replace({" ":""})|lower}}">{{exchange.name}}</a></div>
+                    </td>
+                    <td class="table-cell">{{ exchange.volume | number_format (2,".",",")  }}</td>
+                    <td class="table-cell mobile-hide">{{ exchange.numberOfMarkets}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+
+
+{% include "inc/pagination.html.twig" %}
+
+
+{% endblock %}
+
+
+
+       

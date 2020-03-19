@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block title %}CoinWatch {% endblock %}
+{% block body %}
+{% for exchange in data %}
+{% if exchange.id == exchangeId %}
+
+<div class="content"> 
+    <div class="item-section item-profile">
+    
+        <div class="left-side">
+            <img class="item-md-logo" src="{{exchange.iconUrl}}">
+            <div>
+            {{exchange.name}}
+            </div>
+        </div> 
+
+        <div class="right-side">
+            <div> Rank {{exchange.rank}}</div>  
+        </div>        
+    </div>
+
+{% if exchange.description != null %}
+    <div class="item-section item-description">
+        <div class="item-heading">What is {{exchange.name}}?</div>
+        <p>{{exchange.description}}</p>
+    </div>
+{% endif %}   
+
+    <div class="item-section item-details">
+        <div class="item-heading">{{exchange.name}} Details</div>
+            <div>
+                <div class="caption">24h Trade Volume:</div>
+                $ {{exchange.volume | number_format (2,".",",")}}
+            </div>
+
+            <div>
+                <div class="caption">Market Share:</div>
+                $ {{exchange.marketShare | number_format (2,".",",")}} 
+            </div>
+    </div> 
+
+    <div class="item-section item-links">
+                <div class="item-heading">{{exchange.name}} Links</div>
+                    <div>
+                        <i class="fas fa-external-link-alt"></i><a href="{{exchange.websiteUrl}}" target="_blank"> {{exchange.websiteUrl}}</a>
+                    </div>
+    </div>
+</div> 
+
+
+
+{% endif %}
+{% endfor %}
+
+{% endblock %}

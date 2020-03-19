@@ -1,0 +1,14 @@
+coins json 
+http://myjson.com/geh5m
+https://api.myjson.com/bins/geh5m
+
+
+exchanges json
+http://myjson.com/fxbve
+https://api.myjson.com/bins/fxbve
+
+
+
+bitcoin
+http://myjson.com/p9r26
+https://api.myjson.com/bins/p9r26

@@ -1,0 +1,45 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div class="content"> 
+    <div class="header-text">
+        <h2 class="header-title">Prices of all cryptocurrencies</h2>
+        <p class="header-desc">View current prices, exchanges and charts of 10,043 cryptocurrencies.</p>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Cryptocurrency</th>
+                <th>Price</th>
+                <th class="mobile-hide">Market Cap</th>
+                <th class="mobile-hide">24h Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coin in data.coins %}
+            {% if coin.change > 0 %}
+            {% set dataColor = "positive" %}
+            {% else %}
+            {% set dataColor = "negative" %}
+            {% endif %}
+            <tr>
+                <td>{{ coin.rank}}</td>
+                <td>
+                    <img class="item-sm-logo" src="{{coin.iconUrl}}">
+                    <div class="item-name"><a href="coin/{{coin.id}}+{{coin.name|replace({" ":""})|lower}}">{{coin.name}}</a></div>
+                </td>
+                <td>$ {{ coin.price | number_format (2,".",",") }}</td>
+                <td class="mobile-hide">$ {{ coin.marketCap | number_format (2,".",",")}}</td>
+                <td class="mobile-hide {{dataColor}}">{{ coin.change}}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>    
+
+{% include "inc/pagination.html.twig" %}
+
+
+{% endblock %}

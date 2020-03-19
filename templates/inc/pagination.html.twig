@@ -1,0 +1,27 @@
+{% set currentPage = (data.stats.offset / 50) | round + 1 %}
+{% set totalPages = (data.stats.total / 50) | round %}
+{% if data.stats.offset == 0  %}
+{% set firstPage = "first-page" %}
+{% else %}
+{% set firstPage = "" %}
+{% endif %}
+{% if data.stats.offset == totalPages %}
+{% set lastPage = "last-page" %}
+{% else %}
+{% set lastPage = "" %}
+{% endif %}
+
+{% set previousPage = currentPage - 1 %}
+{% set nextPage = currentPage + 1 %}
+{% set currentPath = path(app.request.attributes.get('_route'),app.request.attributes.get('_route_params')) %}
+
+
+<div class="pagination-section">
+    <a class="pagination-button {{firstPage}}" href={{currentPath ~ "?page=" ~ previousPage }}>
+      <img class="pagination-img" src="http://localhost/coinwatch/public/img/arrow-left.svg"> </img>
+    </a>
+  <span class="pages-info">Page {{currentPage}} of {{totalPages}}</span>
+   <a class="pagination-button {{lastPage}}" href={{currentPath ~ "?page=" ~ nextPage }}>
+      <img class="pagination-img" src="http://localhost/coinwatch/public/img/arrow-right.svg"> </img>
+    </a>
+</div>

@@ -1,0 +1,174 @@
+body{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    min-height: 700px;
+    margin: 2rem auto 0 auto;
+}
+
+.item-sm-logo{
+    width: 23px;
+    height: 23px;
+}
+
+.item-md-logo{
+    width: 60px;
+    height: 60px;
+}
+
+.pagination-section{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.pagination-button{
+    vertical-align: middle;
+    text-indent: -999px;
+    overflow: hidden;
+    padding: 0;
+    width: 100px;
+    height: 42px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    background-color: #12161f;
+    color: #fff;
+    border-radius: 50px;
+    transition: background-color .1s ease-out;
+}
+
+
+.pagination-button .pagination-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    margin: auto;
+}
+
+.first-page, .last-page{
+    background-color: #12161f17;
+    cursor: default;
+    pointer-events: none   
+}
+
+.pages-info{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.content-table{
+    width: 100%;
+}
+
+.header-text{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.mobile-hide{
+    display: none;
+}
+
+.item-profile{
+    background-color: #12161f;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    font-weight: 600;
+}
+
+.item-section{
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.item-heading{
+    background: #e0e0e8;
+    height: 30px;
+    width: 100%;
+    padding: 0 15px;
+    clear: both;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.item-details .caption{
+    font-weight: 600;
+    display: inline;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+.search-content{
+    display: flex;
+    flex-direction: column;
+    padding-right: 3rem;
+}
+
+.search-results{
+    position: absolute;
+    padding: 1rem;
+    display: none;
+    top: 10.5rem;
+    background-color: #fff;
+    border: 0.5px solid #ccc;
+    border-radius: 0.3rem;
+    width: 17.5rem;
+}
+
+.search-label{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer{
+    padding: 1rem 0;
+    background-color: #12161f;
+    text-align: center;
+    color: #fff;
+}
+
+.positive{
+    color: #00b053;
+}
+
+.negative{
+    color: #eb0a25;
+}
+
+@media only screen and (min-width:600px){
+.content{
+    width: 60%;
+    margin: 2rem auto 0 auto;
+}
+
+.mobile-hide{
+    display: table-cell;
+}
+
+.search-results{
+    position: absolute;
+    padding: 1rem;
+    display: none;
+    top: 3rem;
+    background-color: #fff;
+    border: 0.5px solid #ccc;
+    border-radius: 0.3rem;
+    width: 12.5rem;
+}
+
+}

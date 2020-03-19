@@ -1,0 +1,75 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+{% if data.change > 0 %}
+{% set dataColor = "positive" %}
+{% else %}
+{% set dataColor = "negative" %}
+{% endif %}
+
+       
+       <div class="content"> 
+            <div class="item-section item-profile">
+
+                <div class="left-side">
+                    <img class="item-md-logo" src="{{data.iconUrl}}">
+                    <div>
+                    {{data.symbol}}
+                    {{data.name}}
+                    </div>
+                </div> 
+
+                <div class="right-side">
+                    <div> Rank {{data.rank}}</div>
+                    <div>$ {{data.price | number_format (2,".",",")}} </div>
+                    <div class={{dataColor}}>{{data.change}}%</div>
+                </div>    
+                
+            </div>
+
+{% if data.description != null %}
+            <div class="item-section item-description">
+                <div class="item-heading">What is {{data.name}}?</div>
+                <p>{{data.description}}</p>
+            </div>
+{% endif %}
+
+            <div class="item-section item-details">
+                <div class="item-heading">{{data.name}} Details</div>
+                    <div>
+                        <div class="caption">All time high:</div>
+                        $ {{data.allTimeHigh.price | number_format (2,".",",")}}
+                    </div>
+
+                    <div>
+                        <div class="caption">Market cap:</div>
+                        $ {{data.marketCap | number_format (2,".",",")}} 
+                    </div>
+
+                    <div>
+                        <div class="caption">24h trade volume:</div>
+                        $ {{data.volume | number_format (2,".",",")}} 
+                    </div>
+
+                    <div>
+                        <div class="caption">Total supply:</div>
+                        {{data.totalSupply | number_format (2,".",",")}} 
+                    </div>
+
+                    <div>
+                        <div class="caption">Circulating supply</div>
+                        {{data.circulatingSupply | number_format (2,".",",")}} 
+                    </div>
+            </div>    
+
+            <div class="item-section item-links">
+                <div class="item-heading">{{data.name}} Links</div>
+                {% for web in data.links %}
+                    <div>
+                        <i class="fas fa-external-link-alt"></i><a href="{{web.url}}" target="_blank"> {{web.name}}</a>
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

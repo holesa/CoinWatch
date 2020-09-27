@@ -112,7 +112,7 @@ class __TwigTemplate_76dcd94e18921ef3845bd23d2bdfe5658d6d46712bd431dd8995d836fd5
                     echo "?</div>
         <p>";
                     // line 26
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["exchange"], "description", [], "any", false, false, false, 26), "html", null, true);
+                    echo twig_get_attribute($this->env, $this->source, $context["exchange"], "description", [], "any", false, false, false, 26);
                     echo "</p>
     </div>
 ";
@@ -216,7 +216,7 @@ class __TwigTemplate_76dcd94e18921ef3845bd23d2bdfe5658d6d46712bd431dd8995d836fd5
 {% if exchange.description != null %}
     <div class=\"item-section item-description\">
         <div class=\"item-heading\">What is {{exchange.name}}?</div>
-        <p>{{exchange.description}}</p>
+        <p>{{exchange.description | raw}}</p>
     </div>
 {% endif %}   
 

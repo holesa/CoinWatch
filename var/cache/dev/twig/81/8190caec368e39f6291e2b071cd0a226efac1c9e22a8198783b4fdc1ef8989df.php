@@ -50,8 +50,8 @@ class __TwigTemplate_947aff1daecb69bf60d0a456c6190306ef3b8ec60c3faf73d4ba2e60a3b
         // line 6
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
-        <link rel=\"icon\" href=\"http://localhost/coinwatch/public/img/favicon.png\" type=\"image/gif\">
-        <link type=\"text/css\" rel=\"stylesheet\" href=\"http://localhost/coinwatch/public/style/style.css\">
+        <link rel=\"icon\" href=\"/img/favicon.png\" type=\"image/gif\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style/style.css\">
         <link type=\"text/css\" rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">
         <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css\">
         
@@ -78,7 +78,7 @@ class __TwigTemplate_947aff1daecb69bf60d0a456c6190306ef3b8ec60c3faf73d4ba2e60a3b
 
         <script src=\"https://code.jquery.com/jquery-3.4.1.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"></script>
-        <script src=\"http://localhost/coinwatch/public/js/script.js\"></script>
+        <script src=\"/js/script.js\"></script>
     </body>
 </html>
 ";
@@ -159,8 +159,8 @@ class __TwigTemplate_947aff1daecb69bf60d0a456c6190306ef3b8ec60c3faf73d4ba2e60a3b
         <meta charset=\"UTF-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
         <title>{% block title %}CoinWatch{% endblock %}</title>
-        <link rel=\"icon\" href=\"http://localhost/coinwatch/public/img/favicon.png\" type=\"image/gif\">
-        <link type=\"text/css\" rel=\"stylesheet\" href=\"http://localhost/coinwatch/public/style/style.css\">
+        <link rel=\"icon\" href=\"/img/favicon.png\" type=\"image/gif\">
+        <link type=\"text/css\" rel=\"stylesheet\" href=\"/style/style.css\">
         <link type=\"text/css\" rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">
         <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css\">
         
@@ -174,7 +174,7 @@ class __TwigTemplate_947aff1daecb69bf60d0a456c6190306ef3b8ec60c3faf73d4ba2e60a3b
 
         <script src=\"https://code.jquery.com/jquery-3.4.1.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>
         <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"></script>
-        <script src=\"http://localhost/coinwatch/public/js/script.js\"></script>
+        <script src=\"/js/script.js\"></script>
     </body>
 </html>
 ", "base.html.twig", "C:\\xampp\\htdocs\\coinWatch\\templates\\base.html.twig");

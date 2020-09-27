@@ -30,7 +30,7 @@
 {% if data.description != null %}
             <div class="item-section item-description">
                 <div class="item-heading">What is {{data.name}}?</div>
-                <p>{{data.description}}</p>
+                <div>{{data.description | raw}}</div>
             </div>
 {% endif %}
 

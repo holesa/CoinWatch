@@ -23,7 +23,7 @@
 {% if exchange.description != null %}
     <div class="item-section item-description">
         <div class="item-heading">What is {{exchange.name}}?</div>
-        <p>{{exchange.description}}</p>
+        <p>{{exchange.description | raw}}</p>
     </div>
 {% endif %}   
 

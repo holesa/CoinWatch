@@ -113,13 +113,6 @@
         <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SearchController"/>
       </call>
     </service>
-    <service id="App\Controller\SeedController" class="App\Controller\SeedController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.pNNo5z3.App\Controller\SeedController"/>
-      </call>
-    </service>
     <service id="App\Model\CallApi" class="App\Model\CallApi" autowire="true" autoconfigure="true"/>
     <service id="App\Model\Search" class="App\Model\Search" autowire="true" autoconfigure="true"/>
     <service id="controller_resolver" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerResolver" public="false">
@@ -1586,9 +1579,6 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SearchController" class="App\Controller\SearchController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SeedController" class="App\Controller\SeedController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SeedController" class="App\Controller\SeedController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\SeedController" class="App\Controller\SeedController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -1707,12 +1697,6 @@
     <service id=".service_locator.pNNo5z3.App\Controller\SearchController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SearchController"/>
       <argument>App\Controller\SearchController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.pNNo5z3" method="withContext"/>
-    </service>
-    <service id=".service_locator.pNNo5z3.App\Controller\SeedController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\SeedController"/>
-      <argument>App\Controller\SeedController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.pNNo5z3" method="withContext"/>
     </service>

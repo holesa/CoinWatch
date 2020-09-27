@@ -14,9 +14,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Psr\Log\LoggerInterface;
 
- use App\Model\CallApi;
+use App\Model\CallApi;
 
 class CoinController extends AbstractController{
+    
     /**
      * @Route("/", name="homepage")
      * @Method("GET")
@@ -56,3 +57,11 @@ class CoinController extends AbstractController{
     
 
 }
+
+
+
+
+
+
+
+

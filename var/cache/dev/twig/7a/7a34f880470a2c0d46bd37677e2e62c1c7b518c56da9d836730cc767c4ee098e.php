@@ -114,10 +114,10 @@ class __TwigTemplate_2b8c4c1aec3a9fbf2432e4864802ba62a4c304bf032d7bf1200e6dca4d1
             // line 32
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 32, $this->source); })()), "name", [], "any", false, false, false, 32), "html", null, true);
             echo "?</div>
-                <p>";
+                <div>";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 33, $this->source); })()), "description", [], "any", false, false, false, 33), "html", null, true);
-            echo "</p>
+            echo twig_get_attribute($this->env, $this->source, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 33, $this->source); })()), "description", [], "any", false, false, false, 33);
+            echo "</div>
             </div>
 ";
         }
@@ -252,7 +252,7 @@ class __TwigTemplate_2b8c4c1aec3a9fbf2432e4864802ba62a4c304bf032d7bf1200e6dca4d1
 {% if data.description != null %}
             <div class=\"item-section item-description\">
                 <div class=\"item-heading\">What is {{data.name}}?</div>
-                <p>{{data.description}}</p>
+                <div>{{data.description | raw}}</div>
             </div>
 {% endif %}
 

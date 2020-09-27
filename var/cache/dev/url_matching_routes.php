@@ -11,7 +11,6 @@ return [
         '/' => [[['_route' => 'homepage', '_controller' => 'App\\Controller\\CoinController::coinsList'], null, null, null, false, false, null]],
         '/exchanges' => [[['_route' => 'exchanges', '_controller' => 'App\\Controller\\ExchangeController::exchangesList'], null, null, null, false, false, null]],
         '/search' => [[['_route' => 'search', '_controller' => 'App\\Controller\\SearchController::search'], null, null, null, false, false, null]],
-        '/seed' => [[['_route' => 'seed', '_controller' => 'App\\Controller\\SeedController::index'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

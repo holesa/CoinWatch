@@ -1,3 +1,4 @@
 vendor
-readme
-
+var
+dev.log
+.env

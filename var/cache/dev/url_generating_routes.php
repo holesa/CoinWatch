@@ -9,5 +9,4 @@ return [
     'exchanges' => [[], ['_controller' => 'App\\Controller\\ExchangeController::exchangesList'], [], [['text', '/exchanges']], [], []],
     'exchange' => [['exchange'], ['_controller' => 'App\\Controller\\ExchangeController::exchange'], [], [['variable', '/', '[^/]++', 'exchange', true], ['text', '/exchange']], [], []],
     'search' => [[], ['_controller' => 'App\\Controller\\SearchController::search'], [], [['text', '/search']], [], []],
-    'seed' => [[], ['_controller' => 'App\\Controller\\SeedController::index'], [], [['text', '/seed']], [], []],
 ];
